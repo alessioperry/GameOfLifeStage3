@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Console", "GameOfLifeStage3.Console.csproj", "{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Console", "GameOfLifeStage3.Console\GameOfLifeStage3.Console.csproj", "{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business", "..\GameOfLifeStage3.Business\GameOfLifeStage3.Business.csproj", "{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business", "GameOfLifeStage3.Business\GameOfLifeStage3.Business.csproj", "{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business.Test", "..\GameOfLifeStage3.Business.Test\GameOfLifeStage3.Business.Test.csproj", "{A5D48746-2EE1-4771-B0FC-E749BBA90902}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business.Test", "GameOfLifeStage3.Business.Test\GameOfLifeStage3.Business.Test.csproj", "{A5D48746-2EE1-4771-B0FC-E749BBA90902}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

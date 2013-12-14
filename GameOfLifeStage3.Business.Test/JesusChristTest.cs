@@ -72,6 +72,11 @@ namespace GameOfLifeStage3.Business.Test
             status = Status.Dead;
         }
 
+        public void Eraise()
+        {
+            status = Status.Alive;
+        }
+
         public bool IsAlive()
         {
             return status == Status.Alive;
