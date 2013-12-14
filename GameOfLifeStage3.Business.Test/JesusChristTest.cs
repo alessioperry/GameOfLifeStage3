@@ -8,6 +8,8 @@ namespace GameOfLifeStage3.Business.Test
     {
         private Cell second;
         private Cell first;
+        private Cell third;
+        private Cell forth;
         private Jesus jesus;
 
         [SetUp]
@@ -15,6 +17,9 @@ namespace GameOfLifeStage3.Business.Test
         {
             first = new Cell();
             second = new Cell();
+            third = new Cell();
+            forth = new Cell();
+
 
             jesus = new Jesus(first);
         }
@@ -35,6 +40,18 @@ namespace GameOfLifeStage3.Business.Test
             jesus.Evolve();
 
             Assert.False(first.IsAlive());
+        }
+
+        [Test]
+        public void AnyLiveCellWithTwoOrThreeLiveNeighboursLivesOnToTheNextGeneration()
+        {
+            first.AddNeighbour(second);
+            first.AddNeighbour(third);
+            first.AddNeighbour(forth);
+            
+            jesus.Evolve();
+
+            Assert.True(first.IsAlive());
         }
 
     }
@@ -59,6 +76,7 @@ namespace GameOfLifeStage3.Business.Test
             if (neighbours != null)
             neighbours.Add(cell);
 
+            else
             neighbours = new List<Cell> { cell };
         }
 
