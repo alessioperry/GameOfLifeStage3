@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Console", "GameOfLifeStage3.Console.csproj", "{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business", "..\GameOfLifeStage3.Business\GameOfLifeStage3.Business.csproj", "{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfLifeStage3.Business.Test", "..\GameOfLifeStage3.Business.Test\GameOfLifeStage3.Business.Test.csproj", "{A5D48746-2EE1-4771-B0FC-E749BBA90902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DCC554E-E85E-49E9-B413-9A4FA6D1D3CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139F3B14-DCD8-4DAD-AD8B-AEA92CC5E435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D48746-2EE1-4771-B0FC-E749BBA90902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D48746-2EE1-4771-B0FC-E749BBA90902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D48746-2EE1-4771-B0FC-E749BBA90902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D48746-2EE1-4771-B0FC-E749BBA90902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
