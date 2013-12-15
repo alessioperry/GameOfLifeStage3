@@ -70,6 +70,31 @@ namespace GameOfLifeStage3.Business.Test
 
 
             myGraph.AddVertex(upperCenter);
+            myGraph.AddVertex(upperLeft);
+            myGraph.AddVertex(upperRight);
+            myGraph.AddVertex(middleCenter);
+            myGraph.AddVertex(middleLeft);
+            myGraph.AddVertex(middleRight);
+            myGraph.AddVertex(lowerCenter);
+            myGraph.AddVertex(lowerRight);
+            myGraph.AddVertex(lowerLeft);
+
+            myGraph.AddEdge(upperLeftupperCenter);
+            myGraph.AddEdge(upperCenterupperRight);
+            myGraph.AddEdge(upperRightmiddleRight);
+            myGraph.AddEdge(middleRightlowerRight);
+            myGraph.AddEdge(lowerCenterlowerLeft);
+            myGraph.AddEdge(lowerLeftmiddleLeft);
+            myGraph.AddEdge(middleLeftupperLeft);
+            myGraph.AddEdge(upperLeftmiddleCenter);
+            myGraph.AddEdge(upperCenterMiddleCenter);
+            myGraph.AddEdge(upperRightMiddleCenter);
+            myGraph.AddEdge(middleRightMiddleCenter);
+            myGraph.AddEdge(middleLeftMiddleCenter);
+            myGraph.AddEdge(lowerLeftMiddleCenter);
+            myGraph.AddEdge(lowerCenterMiddleCenter);
+            myGraph.AddEdge(lowerRightMiddleCenter);
+            myGraph.AddEdge(lowerRightlowerCenter);
 
             jesus = new Jesus(upperCenter);
         }
