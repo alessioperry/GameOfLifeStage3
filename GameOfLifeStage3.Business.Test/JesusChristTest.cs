@@ -1,27 +1,77 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
+using QuickGraph;
 
 namespace GameOfLifeStage3.Business.Test
 {
     [TestFixture]
     public class JesusChristTest
     {
-        private Cell second;
-        private Cell first;
-        private Cell third;
-        private Cell forth;
-        private Jesus jesus;
+        private Cell upperLeft;
+        private Cell upperCenter;
+        private Cell upperRight;
+        private Cell middleLeft;
+        private Cell middleCenter;
+        private Cell middleRight;
+        private Cell lowerLeft;
+        private Cell lowerCenter;
+        private Cell lowerRight;
 
-        [SetUp]
+        private MyEdge upperLeftupperCenter;
+        private MyEdge upperCenterupperRight;
+        private MyEdge upperRightmiddleRight;
+        private MyEdge middleRightlowerRight;
+        private MyEdge lowerRightlowerCenter;
+        private MyEdge lowerCenterlowerLeft;
+        private MyEdge lowerLeftmiddleLeft;
+        private MyEdge middleLeftupperLeft;
+        private MyEdge upperLeftmiddleCenter;
+        private MyEdge upperCenterMiddleCenter;
+        private MyEdge upperRightMiddleCenter;
+        private MyEdge middleRightMiddleCenter;
+        private MyEdge middleLeftMiddleCenter;
+        private MyEdge lowerLeftMiddleCenter;
+        private MyEdge lowerCenterMiddleCenter;
+        private MyEdge lowerRightMiddleCenter;
+
+
+        private Jesus jesus;
+        private UndirectedGraph<Cell, MyEdge> myGraph;
+
+        [SetUp] 
         public void SetUp()
         {
-            first = new Cell();
-            second = new Cell();
-            third = new Cell();
-            forth = new Cell();
+            upperCenter = new Cell();
+            upperLeft = new Cell();
+            upperRight = new Cell();
+            middleLeft = new Cell();
+            middleCenter = new Cell();
+            middleRight = new Cell();
+            lowerLeft = new Cell();
+            lowerCenter = new Cell();
+            lowerRight = new Cell();
+
+            upperLeftupperCenter = new MyEdge(upperLeft, upperCenter);
+            upperCenterupperRight = new MyEdge(upperCenter, upperRight);
+            upperRightmiddleRight = new MyEdge(upperCenter, middleRight);
+            middleRightlowerRight = new MyEdge(middleRight, middleCenter);
+            lowerRightlowerCenter = new MyEdge(lowerRight, lowerCenter);
+            lowerCenterlowerLeft = new MyEdge(lowerCenter, lowerLeft);
+            lowerLeftmiddleLeft = new MyEdge(lowerLeft, middleLeft);
+            middleLeftupperLeft = new MyEdge(middleLeft, upperLeft);
+            upperLeftmiddleCenter = new MyEdge(upperLeft, middleCenter);
+            upperCenterMiddleCenter = new MyEdge(upperCenter, middleCenter);
+            upperRightMiddleCenter = new MyEdge(upperRight, middleCenter);
+            middleRightMiddleCenter = new MyEdge(middleRight, middleCenter);
+            middleLeftMiddleCenter = new MyEdge(middleLeft, middleCenter);
+            lowerLeftMiddleCenter = new MyEdge(lowerLeft, middleCenter);
+            lowerCenterMiddleCenter = new MyEdge(lowerCenter, middleCenter);
+            lowerRightMiddleCenter = new MyEdge(lowerLeft, middleCenter);
 
 
-            jesus = new Jesus(first);
+            myGraph.AddVertex(upperCenter);
+
+            jesus = new Jesus(upperCenter);
         }
 
         [Test]
@@ -29,29 +79,29 @@ namespace GameOfLifeStage3.Business.Test
         {
             jesus.Evolve();
 
-            Assert.False(first.IsAlive());
+            Assert.False(upperCenter.IsAlive());
         }
 
         [Test]
         public void IfYouHaveTwoCellsTheyDiesTogheter()
         {
-            first.AddNeighbour(second);
+            upperCenter.AddNeighbour(upperLeft);
 
             jesus.Evolve();
 
-            Assert.False(first.IsAlive());
+            Assert.False(upperCenter.IsAlive());
         }
 
         [Test]
         public void AnyLiveCellWithTwoOrThreeLiveNeighboursLivesOnToTheNextGeneration()
         {
-            first.AddNeighbour(second);
-            first.AddNeighbour(third);
-            first.AddNeighbour(forth);
+            upperCenter.AddNeighbour(upperLeft);
+            upperCenter.AddNeighbour(upperRight);
+            upperCenter.AddNeighbour(middleLeft);
             
             jesus.Evolve();
 
-            Assert.True(first.IsAlive());
+            Assert.True(upperCenter.IsAlive());
         }
 
     }
@@ -115,5 +165,18 @@ namespace GameOfLifeStage3.Business.Test
            if(cell.NeighbourCount() < 2)
             cell.Killme();
         }
+    }
+
+    public class MyEdge : IEdge<Cell>
+    {
+        public MyEdge(Cell source, Cell target)
+        {
+            Source = source;
+            Target = target;
+        }
+
+        public Cell Source { get; private set; }
+
+        public Cell Target { get; private set; }
     }
 }
